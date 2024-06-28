@@ -1,10 +1,15 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class HeadsOrTails{
     public static void main(String[] args){
         Random rand = new Random();
+        Scanner sc = new Scanner(System.in);
         int headsCount = 0, tailsCount = 0;
 
+        System.out.println("Who are you? ");
+        String name = sc.nextLine();
+        System.out.println("Hello, " + name + "!");
         System.out.println("Tossing a coin...");
 
         for(int i=1;i<=3;i++){
@@ -20,9 +25,9 @@ public class HeadsOrTails{
         System.out.println("Heads: " + headsCount + ", Tails: " + tailsCount);
 
         if(headsCount>tailsCount){
-            System.out.println("You won!");
+            System.out.println(name + " won!");
         }else{
-            System.out.println("You lost!");
+            System.out.println(name + " lost!");
         }
     }
 }
